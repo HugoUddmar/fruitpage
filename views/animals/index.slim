@@ -1,0 +1,26 @@
+h1 Alla frukter
+
+form action="/animals/new" method="get"
+    input type="submit" value="Skapa djur!"
+
+p 
+
+form action="/animals" method="get"
+    input name="q" placeholder="Sök på animal" type="text"
+    input type="submit" value="Sök!"
+
+hr
+
+- @animals.each do |animal|
+    p #{animal["id"]}
+    p #{animal["name"]}
+    p Antal: #{animal["amount"]}
+    
+    form action="animals/#{animal['id']}/edit" method="get" 
+        input type="submit" value="edit"
+
+    p
+
+    form action="animals/#{animal['id']}/delete" method="post" 
+        input type="submit" value="delete"
+    hr

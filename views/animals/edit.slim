@@ -1,0 +1,6 @@
+h2 Update
+
+form action="/animals/#{@selected_animal["id"]}/update" method="post"
+    input name="q" placeholder="#{@selected_animal["name"]}" type="text"
+    input name="a" placeholder="#{@selected_animal["amount"]}" type="text"
+    input type="submit" value="Uppdatera!"

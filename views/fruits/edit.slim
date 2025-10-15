@@ -1,0 +1,9 @@
+h2 Uppdatera din frukt
+
+form action="/fruits/#{@selected_fruit['id']}/update" method="post" 
+    input type="text" name="name" value="#{@selected_fruit['name']}"
+    input type="number" name="amount" value="#{@selected_fruit['amount']}"
+    input type="submit" value="Uppdatera!"
+
+
+    
